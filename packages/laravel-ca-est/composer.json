@@ -1,0 +1,33 @@
+{
+    "name": "groupesti/laravel-ca-est",
+    "description": "EST (Enrollment over Secure Transport) protocol implementation for Laravel CA - RFC 7030",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "groupesti/laravel-ca": "^1.0",
+        "groupesti/laravel-ca-crt": "^1.0",
+        "groupesti/laravel-ca-csr": "^1.0",
+        "groupesti/laravel-ca-key": "^1.0",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CA\\Est\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CA\\Est\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CA\\Est\\EstServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

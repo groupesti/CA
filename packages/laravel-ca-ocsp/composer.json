@@ -1,0 +1,36 @@
+{
+    "name": "groupesti/laravel-ca-ocsp",
+    "description": "OCSP responder for Laravel CA using pure PHP (phpseclib v3)",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "groupesti/laravel-ca": "^1.0",
+        "groupesti/laravel-ca-crt": "^1.0",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CA\\OCSP\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CA\\OCSP\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CA\\OCSP\\OcspServiceProvider"
+            ],
+            "aliases": {
+                "CaOcsp": "CA\\OCSP\\Facades\\CaOcsp"
+            }
+        }
+    }
+}

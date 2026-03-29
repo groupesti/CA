@@ -1,0 +1,36 @@
+{
+    "name": "groupesti/laravel-ca-acme",
+    "description": "ACME protocol (RFC 8555) implementation for Laravel CA",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "groupesti/laravel-ca": "^1.0",
+        "groupesti/laravel-ca-crt": "^1.0",
+        "groupesti/laravel-ca-csr": "^1.0",
+        "groupesti/laravel-ca-key": "^1.0",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CA\\Acme\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CA\\Acme\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CA\\Acme\\AcmeServiceProvider"
+            ],
+            "aliases": {
+                "CaAcme": "CA\\Acme\\Facades\\CaAcme"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

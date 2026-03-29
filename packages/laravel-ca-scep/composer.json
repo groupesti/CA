@@ -1,0 +1,38 @@
+{
+    "name": "groupesti/laravel-ca-scep",
+    "description": "SCEP (Simple Certificate Enrollment Protocol) server for Laravel CA",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "groupesti/laravel-ca": "^1.0",
+        "groupesti/laravel-ca-crt": "^1.0",
+        "groupesti/laravel-ca-csr": "^1.0",
+        "groupesti/laravel-ca-key": "^1.0",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CA\\Scep\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CA\\Scep\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CA\\Scep\\ScepServiceProvider"
+            ],
+            "aliases": {
+                "CaScep": "CA\\Scep\\Facades\\CaScep"
+            }
+        }
+    }
+}
