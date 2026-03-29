@@ -5,8 +5,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.4",
-        "groupesti/laravel-ca": "^1.0",
-        "groupesti/laravel-ca-key": "^1.0",
+        "groupesti/laravel-ca": "^0.1",
+        "groupesti/laravel-ca-key": "^0.1",
         "phpseclib/phpseclib": "^3.0"
     },
     "require-dev": {
